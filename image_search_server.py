@@ -1,3 +1,4 @@
+import os
 import functools
 import collections
 import json
@@ -91,4 +92,4 @@ def get_google_image(url):
 	})
 
 if __name__ == "__main__":
-        app.run(host='0.0.0.0', port=8000)
+        app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8000)))
